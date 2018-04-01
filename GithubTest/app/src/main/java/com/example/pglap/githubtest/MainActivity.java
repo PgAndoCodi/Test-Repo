@@ -10,6 +10,8 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private String[] listOfNames = {"Arun", "Akash", "Zohar", "Naveen", "Kailash"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,22 +43,22 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public int getCount() {
-                return 0;
+                return listOfNames.length;
             }
 
             @Override
             public Object getItem(int position) {
-                return null;
+                return listOfNames[position];
             }
 
             @Override
             public long getItemId(int position) {
-                return 0;
+                return (long) position;
             }
 
             @Override
             public boolean hasStableIds() {
-                return false;
+                return true;
             }
 
             @Override
